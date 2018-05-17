@@ -13,7 +13,12 @@
     <title>RupeeCollector!</title>
 </head>
 
-<body>
+<audio id="theme" src="assets/zelda.mp3" autoplay></audio>
+
+<audio id="get-rupee" src="assets/rupee.wav"></audio>
+
+<!-- Can't get autoplay or onload attribute to work in Chrome :-/ -->
+<body onclick="document.getElementById('theme').play()">
     <div class="bg">
 
         <h1>RupeeCollector!</h1>
@@ -38,7 +43,7 @@
             <div id="num-losses">0</div>
         </div>
 
-        <div class="rupee-imgs">
+        <div class="rupee-imgs" onclick="document.getElementById('get-rupee').play();">
             <img id="green" src="assets/images/green_rupee.jpg" alt="Green Rupee">
             <img id="blue" src="assets/images/blue_rupee.jpg" alt="Blue Rupee">
             <img id="red" src="assets/images/red_rupee.jpg" alt="Red Rupee">
