@@ -22,9 +22,6 @@ function setInitVals() {
 
 }
 
-// Call function to set values
-setInitVals();
-
 // Declare wins and losses variables to keep track of score
 var wins = 0;
 var losses = 0;
@@ -43,9 +40,6 @@ function gameOver(won) {
     setInitVals();
 }
 
-// Declare boolean to determine if game has been won or lost
-var gameWon;
-
 // Function will update html upon click events and check game status after 
 //  each click. This function must take an argument so that each color rupee 
 //  gets its corresponding element in the rupee random number array
@@ -58,16 +52,17 @@ function clicktoHTML(element) {
         // Check after each click if game has been won or lost and 
         //  if so, restart game
         if (totScore === randNum) {
-            gameWon = true;
-            gameOver(gameWon);
+            gameOver(true);
         } else if (totScore > randNum) {
-            gameWon = false;
-            gameOver(gameWon);
+            gameOver(false);
         }
     })
 }
 
 $(document).ready(function () {
+    // Call function to set values
+    setInitVals();
+
     for (i in elementImgArr) {
         // Call function to generate click event for each rupee
         clicktoHTML(i);
