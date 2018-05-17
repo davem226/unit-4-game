@@ -46,17 +46,17 @@ function gameOver(won) {
 // Declare boolean to determine if game has been won or lost
 var gameWon;
 
-// Function to add to html upon click events and check game status after 
-//  each click
+// Function will update html upon click events and check game status after 
+//  each click. This function must take an argument so that each color rupee 
+//  gets its corresponding element in the rupee random number array
 function clicktoHTML(element) {
-    // Generate function to update total score when a rupee is clicked
-    // The function must take an argument so that each color rupee gets its 
-    //  corresponding element in the rupee random number array
+    // Create click event function to update total score when rupee is clicked
     $(elementImgArr[element]).click(function () {
         totScore += rupeeArr[element];
         $("#total-score").html(totScore);
 
-        // Check after each click if game has been won or lost and restart game
+        // Check after each click if game has been won or lost and 
+        //  if so, restart game
         if (totScore === randNum) {
             gameWon = true;
             gameOver(gameWon);
@@ -69,7 +69,7 @@ function clicktoHTML(element) {
 
 $(document).ready(function () {
     for (i in elementImgArr) {
-        // Generate click event for each rupee
+        // Call function to generate click event for each rupee
         clicktoHTML(i);
     }
 })
