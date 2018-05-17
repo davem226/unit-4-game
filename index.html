@@ -6,43 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- Link CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <!-- Link jQuery-->
     <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
     <title>RupeeCollector!</title>
 </head>
 
 <body>
-    <h1>RupeeCollector!</h1>
+    <div class="bg">
 
-    <div class="instructions">
-        <p>You will be given a random number at the start of the game.</p>
-        <p>There are four rupees below. By clicking on a rupee, you will add a specific amount of total points to your total
-            score.</p>
-        <p>You win the game by matching your total score to the random number! You lose the game if your total score goes above
-            the random number.</p>
-        <p>The value of each rupee is hidden from you until you click on it.</p>
-        <p>Each time the game starts, the rupees will have different values.</p>
+        <h1>RupeeCollector!</h1>
+
+        <div class="instructions">
+            <p>You will be given a random number at the start of the game.</p>
+            <p>There are four rupees below. By clicking on a rupee, you will add a specific amount of total points to your total
+                score.
+            </p>
+            <p>You win the game by matching your total score to the random number! You lose the game if your total score goes
+                above the random number.</p>
+            <p>The value of each rupee is hidden from you until you click on it.</p>
+            <p>Each time the game starts, the rupees will have different values.</p>
+        </div>
+
+        <div id="rand-num">0</div>
+
+        <div class="record">
+            Wins:
+            <div id="num-wins"></div>
+            <br> Losses:
+            <div id="num-losses"></div>
+        </div>
+
+        <div class="rupee-imgs">
+            <img id="green" src="assets/images/green_rupee.jpg" alt="Green Rupee">
+            <img id="blue" src="assets/images/blue_rupee.jpg" alt="Blue Rupee">
+            <img id="red" src="assets/images/red_rupee.jpg" alt="Red Rupee">
+            <img id="yellow" src="assets/images/yellow_rupee.jpg" alt="Yellow Rupee">
+        </div>
+
+        <div class="score-hdg">Your total score is:</div>
+
+        <div id="total-score">0</div>
+
     </div>
-
-    <div id="rand-num"></div>
-
-    <div class="record">
-        Wins:
-        <div id="num-wins"></div>
-        <br>
-        Losses:
-        <div id="num-losses"></div>
-    </div>
-
-    <div class="rupee-imgs">
-
-    </div>
-
-    <div class="score-hdg">Your total score is:</div>
-
-    <div id="total-score"></div>
 
     <!-- Link javascript -->
     <script src="assets/javascript/game.js"></script>

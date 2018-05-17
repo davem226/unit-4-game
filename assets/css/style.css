@@ -1,0 +1,74 @@
+#green, #blue, #red, #yellow {
+    height: 120px;
+    width: 120px;
+}
+
+body, html {
+    height: 100%;
+    font-size: 22px;
+}
+.bg { 
+
+    /* The image used */
+    background-image: url("../images/hyrule_castle.png");
+
+    /* Full height */
+    height: 1200px; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1 {
+    font-size: 42px;
+    text-align: center;
+    padding: 35px;
+    width: 30%;
+    background-color: green;
+    color: white;
+}
+
+.instructions {
+    padding: 20px;
+    width: 50%;
+    background-color: bisque;
+}
+
+p {
+    padding: 20px;
+    line-height: 1.5;
+}
+
+#rand-num {
+    color: white;
+    text-align: center;
+    font-size: 42px;
+    padding-top: 15px;
+    padding-bottom: 40px;
+    width: 20%;
+    background-color: blue;
+}
+
+.record {
+    color: white;
+    background-color: firebrick;
+    padding: 25px;
+    width: 10%;
+}
+
+.score-hdg {
+    width: 25%;
+    padding: 10px;
+    background-color: darkkhaki;
+}
+
+#total-score {
+    color: white;
+    text-align: center;
+    font-size: 42px;
+    width: 25%;
+    padding: 10px;
+    background-color: darkkhaki;
+}
